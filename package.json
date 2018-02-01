@@ -1,0 +1,20 @@
+{
+    "name": "python-crawler",
+    "version": "1.0.0",
+    "description": "python简单爬虫",
+    "main": "url.py",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "python url.py"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kevinLiJ/python-crawler.git"
+    },
+    "author": "liyang",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kevinLiJ/python-crawler/issues"
+    },
+    "homepage": "https://github.com/kevinLiJ/python-crawler#readme"
+}
