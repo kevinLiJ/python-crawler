@@ -22,6 +22,7 @@ class OperSql():
         except Exception as e:
             print e
             self.conn.rollback()
+            return False
 
     def close(self):
         # 关闭指针
@@ -29,18 +30,17 @@ class OperSql():
         # 关闭数据库连接
         self.conn.close()
 
-# 操作数据库
-
 
 def opermysql(conn, cursor):
+    # 操作数据库
     cursor.execute("update test set name = 'lijianyang' where id = 1")
     cursor.execute("insert into test (name) values ('dongdongdong') ")
     result = conn.commit()
     return result
-# 操作数据库
 
 
 def querymysql(conn, cursor):
+    # 查询数据库
     cursor.execute("select * from test")
     result = cursor.fetchall()
     return result
