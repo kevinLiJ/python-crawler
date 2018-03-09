@@ -41,7 +41,7 @@ def opermysql(conn, cursor):
 
 def querymysql(conn, cursor):
     # 查询数据库
-    cursor.execute("select * from test")
+    cursor.execute("select page_idx from movie_info_copy")
     result = cursor.fetchall()
     return result
 
@@ -49,4 +49,5 @@ def querymysql(conn, cursor):
 if __name__ == '__main__':
     opersql = OperSql('python')
     result = opersql.oper(querymysql)
-    print result
+    for idx in list(result):
+        print type(idx[0])

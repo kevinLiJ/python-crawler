@@ -1,4 +1,6 @@
+
 # coding:utf-8
+# 从豆瓣获取高分电影名列表
 import urllib2
 import sys
 reload(sys)
@@ -29,6 +31,7 @@ for url in UrlManager().urlList():
         print url + ' ---- Collect the data successfully'
     else:
         print url + ' ---- Connection failed'
+    break
 
 douban = open('doubanData.txt', 'a+')
 for item in doubanData:

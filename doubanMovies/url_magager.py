@@ -1,5 +1,6 @@
-
+# coding:utf-8
 class UrlManager():
+    # 豆瓣高分电影地址
 
     urlTemplate = 'https://www.douban.com/doulist/240962/?start=%s&sort=seq&sub_type='
 

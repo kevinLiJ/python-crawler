@@ -1,3 +1,4 @@
+# coding:utf-8
 class DataParser():
 
     def __init__(self, htmlDom):
@@ -12,6 +13,15 @@ class DataParser():
                 continue
             title = itemDom.select('.title a')[0].get_text()
             score = itemDom.select('.rating .rating_nums')[0].get_text()
+            info = itemDom.select('.abstract')[0].get_text()
+            print info
             parsedData.append(title + score)
-
+        """
+        [{
+            title:电影名
+            score：评分
+            genres：电影类型
+            year：电影年份
+        }]
+        """
         return parsedData

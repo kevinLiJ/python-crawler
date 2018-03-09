@@ -13,10 +13,6 @@
     },
     "author": "liyang",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/kevinLiJ/python-crawler/issues"
-    },
-    "homepage": "https://github.com/kevinLiJ/python-crawler#readme",
     "dependencies": {
         "python": "2.7",
         "beautifulsoup": "4.2.0"
