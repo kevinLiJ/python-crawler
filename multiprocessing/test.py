@@ -1,16 +1,15 @@
 import multiprocessing
-import time
 
 
-def worker():
-    n = 20
-    while n > 0:
-        print(n)
-        n -= 1
+def worker(num):
+    """thread worker function"""
+    print 'Worker:', num
+    return
 
 
-if __name__ == "__main__":
-    p = multiprocessing.Process(target=worker)
-    p1 = multiprocessing.Process(target=worker)
-    p.start()
-    p1.start()
+if __name__ == '__main__':
+    jobs = []
+    for i in range(5):
+        p = multiprocessing.Process(target=worker, args=(i,))
+        jobs.append(p)
+        p.start()

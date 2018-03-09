@@ -1,31 +1,32 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import $ from "jquery";
+
+import { Table } from "antd";
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            thunderLinks: [],
+            html: "123"
+        };
+    }
     componentDidMount() {
         fetch("/api/movies", {
             method: "GET"
-        }).then(function(res) {
-            res.json().then(function(data) {
-                console.log(data);
+        }).then(res => {
+            res.json().then(data => {
+                console.log(data.result[0].thunder_links.split(","));
+                this.setState({
+                    thunderLinks: data.result[0].thunder_links.split(",")
+                });
             });
         });
     }
     render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to
-                    reload.
-                </p>
-            </div>
-        );
+        console.log(this.state.thunderLinks);
+        return <div dangerousSetInnerHTML={{ __html: this.state.html }} />;
     }
 }
 

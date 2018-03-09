@@ -1,34 +1,35 @@
 {
-    "name": "fe",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "body-parser": "~1.17.1",
-        "cookie-parser": "~1.4.3",
-        "debug": "~2.6.3",
-        "express": "~4.15.2",
-        "jade": "~1.11.0",
-        "jquery": "^3.3.1",
-        "morgan": "~1.8.1",
-        "mysql": "^2.15.0",
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0",
-        "react-scripts": "1.1.1",
-        "serve-favicon": "~2.4.2"
-    },
-    "scripts": {
-        "start": "react-scripts start | nodemon ./bin/www",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
-    },
-    "proxy": {
-        "/api": {
-            "target": "http://127.0.0.1:3001",
-            "ws": true,
-            "pathRewrite": {
-                "^/api": "/"
-            }
-        }
+  "name": "fe",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.2.3",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "jquery": "^3.3.1",
+    "morgan": "~1.8.1",
+    "mysql": "^2.15.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start | nodemon ./bin/www",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://127.0.0.1:3001",
+      "ws": true,
+      "pathRewrite": {
+        "^/api": "/"
+      }
     }
+  }
 }
